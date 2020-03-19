@@ -40,23 +40,23 @@ showModal = ({ title, content }) => {
 
 const checkInput = () => {
   let isAllFilled = true;
-  document.querySelectorAll('.hint').forEach(item => item.style.display = 'none');
   document.querySelectorAll('.input-field').forEach(inputField => {
-    if (inputField.value !== '') {
-      inputField.classList.remove('empty-hint-border');
-      return;
-    }
-
     showEmptyHint(inputField);
-    inputField.classList.add('empty-hint-border');
-    isAllFilled = false
+    if (inputField.value === '') {
+      isAllFilled = false
+    }
   })
 
   return isAllFilled;
 }
 
-
 const showEmptyHint = (inputField) => {
+  if (inputField.value !== '') {
+    inputField.classList.remove('empty-hint-border');
+    inputField.parentNode.querySelector('.hint').style.display = 'none';
+    return;
+  }
+  inputField.classList.add('empty-hint-border');
   inputField.parentNode.querySelector('.hint').style.display = 'block';
 }
 
@@ -99,3 +99,7 @@ document.querySelectorAll('.close-modal').forEach(btn => {
     clearFields();
   })
 })
+
+document.querySelectorAll('.input-field').forEach(inputField => {
+  inputField.addEventListener('blur', e => showEmptyHint(e.target))
+});
