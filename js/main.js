@@ -20,7 +20,7 @@ imageInputFields.forEach((input, index) => {
 })
 
 
-/** For Form Submit */
+/** Report Submit */
 const formSubmitBtn = document.querySelector('.submit-btn');
 const popup = document.querySelector('.pop-up');
 const popupHeading = document.querySelector('.pop-up-heading');
@@ -38,11 +38,38 @@ showModal = ({ title, content }) => {
 }
 
 
+const checkInput = () => {
+  let isAllFilled = true;
+  document.querySelectorAll('.hint').forEach(item => item.style.display = 'none');
+  document.querySelectorAll('.input-field').forEach(inputField => {
+    if (inputField.value !== '') {
+      inputField.classList.remove('empty-hint-border');
+      return;
+    }
+
+    showEmptyHint(inputField);
+    inputField.classList.add('empty-hint-border');
+    isAllFilled = false
+  })
+
+  return isAllFilled;
+}
+
+
+const showEmptyHint = (inputField) => {
+  inputField.parentNode.querySelector('.hint').style.display = 'block';
+}
+
+
 const submitReport = () => {
   let times = +localStorage.times || 0;
   const targetDateString = localStorage.targetDate || moment().utc().format();
   const targetDate = moment(targetDateString).utc().utcOffset(480);
   const currentDate = moment().utc().utcOffset(480);
+
+  if (!checkInput()) {
+    return;
+  }
 
   if (times >= 2 && targetDate.date() === currentDate.date()) {
     showModal({ title: '本日提交次数已用完', content: '感谢您对8戒棋牌的支持，<br/>您的意见是我们进步的动力！' });

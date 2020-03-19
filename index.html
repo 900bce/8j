@@ -20,11 +20,13 @@
       <div class="form-border">
         <div class="id-input-box">
           <label for="id" class="input-label">会员ID*</label><br>
-          <input type="text" id="id" placeholder="请输入" class="id-input-field" required />
+          <input type="text" id="id" placeholder="请输入" class="input-field id-input-field" required />
+          <p class="hint">会员ID不可为空</p>
         </div>
         <div class="opinion-input-box">
           <label for="opinion" class="input-label">您的意见、反馈及申诉</label><br>
-          <textarea id="opinion" placeholder="请填写您遇到的具体问题，或者对游戏的建议" class="opinion-input-field"></textarea>
+          <textarea id="opinion" placeholder="请填写您遇到的具体问题，或者对游戏的建议" class="input-field opinion-input-field"></textarea>
+          <p class="hint">反馈意见不可为空</p>
         </div>
         <div class="">
           <p class="input-label">截图让我们更清楚了解您的问题</p>
@@ -46,8 +48,9 @@
         <div>
           <label class="input-label">验证码*</label><br>
           <div>
-            <input type="text" placeholder="请输入" class="code-input-field">
+            <input type="text" placeholder="请输入" class="input-field code-input-field">
             <span class="code">8864</span>
+            <p class="hint">验证码不可为空</p>
           </div>
         </div>
 
