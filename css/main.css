@@ -1,0 +1,224 @@
+html, 
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue", "Helvetica", tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+  background: rgb(255, 243, 248);
+  color: rgb(160, 30, 150);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content-box {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-image: url('../img/background.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+}
+
+.service-btn {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 7rem;
+  height: 7rem;
+  z-index: 10;
+}
+
+.service-btn-image {
+  width: 100%;
+  height: 100%;
+}
+
+.main-header {
+  display: block;
+  width: 80%;
+  max-width: 50rem;
+  margin: 0 auto;
+  display: block;
+  padding-top: 22%;
+  margin-bottom: 4rem;
+}
+
+.main-paragraph {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.8;
+  text-align: center;
+  margin: 2rem 1rem;
+}
+
+.form {
+  background-color: rgb(236, 222, 248);
+  width: 90%;
+  margin: 0 auto;
+  border: solid 8px rgb(241, 230, 241);
+  border-radius: 3px;
+}
+
+.form-border {
+  border: solid 2px rgba(213,190,220, .75);
+  border-radius: 3px;
+  padding: .5rem;
+}
+
+.input-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(150, 20, 60);
+}
+
+.id-input-box, .opinion-input-box {
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+.id-input-field, 
+.opinion-input-field {
+  width: 100%;
+  max-width: 100%;
+  margin: .5rem 0;
+  background-color: rgb(255, 244, 245);
+  border: solid 2px rgb(255, 200, 240);
+  border-radius: 3px;
+}
+
+.id-input-field {
+  height: 2.5rem;
+}
+
+.opinion-input-field {
+  height: 8rem;
+}
+
+.screenshot-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.screenshot {
+  width: 48%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.screenshot img {
+  width: 100%;
+  height: 100%;
+}
+
+.code-input-field {
+  margin: .5rem 0;
+  background-color: rgb(255, 244, 245);
+  border: solid 2px rgb(255, 200, 240);
+  border-radius: 3px;
+  height: 2.5rem;
+}
+
+.stripe {
+  height: 2rem;
+  position: relative;
+  z-index: 0;
+}
+
+.code {
+  display: inline-block;
+  width: 5rem;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  font-size: 1.5rem;
+  background-image: url('../img/stripe.png');
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 15rem;
+  background: transparent;
+  border: none;
+}
+
+.submit-btn img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer img {
+  width: 20rem;
+}
+
+.pop-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 1000;
+}
+
+.pop-up-box {
+  background: white;
+  background-image: url('../img/popup-background.png');
+  background-size: cover;
+  background-position: center;
+  max-width: 36rem;
+  height: 23rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.pop-up-text {
+  color: rgb(184,73,110);
+  margin-top: 5rem;
+}
+
+.pop-up-heading {
+  font-size: 2rem;
+}
+
+.pop-up-content {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 2.5rem;
+}
+
+.popup-isee {
+  width: 10rem;
+  height: auto;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
